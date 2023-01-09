@@ -1,0 +1,113 @@
+// social icons
+@each $color, $value in $social-colors {
+    .icon-#{$color}{
+        @include social_media_colors($value)
+    }
+}
+// social icon buttons
+@each $color, $value in $social-colors {
+    @include social_media_bg('.btn-#{$color}', $value)
+}
+//@include social_media_bg('.btn-facebook', $facebook);
+//@include social_media_bg('.btn-twitter', $twitter);
+//@include social_media_bg('.btn-pinterest', $pinterest);
+//@include social_media_bg('.btn-instagram', $instagram);
+//@include social_media_bg('.btn-google', $google);
+//@include social_media_bg('.btn-linkedin', $linkedin);
+//@include social_media_bg('.btn-youtube', $youtube);
+//@include social_media_bg('.btn-dribbble', $dribbble);
+//@include social_media_bg('.btn-foursquare', $foursquare);
+//@include social_media_bg('.btn-flickr', $flickr);
+//@include social_media_bg('.btn-vimeo', $vimeo);
+//@include social_media_bg('.btn-tumblr', $tumblr);
+//@include social_media_bg('.btn-rss', $rss);
+//@include social_media_bg('.btn-email', $email);
+//@include social_media_bg('.btn-apple', $apple);
+//@include social_media_bg('.btn-android', $android);
+//@include social_media_bg('.btn-windows', $windws);
+
+.#{$prefix}social-icons {
+    @extend .list-unstyled;
+    &.social-lg {
+        li {
+            font-size: 1.5625rem
+        }
+    }
+    &.social-md {
+        li {
+            font-size: 1.125rem
+        }
+    }
+
+    &.blocked {
+        @extend .flex-wrap;
+        @extend .flex-row;
+        li {
+            i, .fa {
+                margin-right: 0.4rem;
+                font-size: 130%;
+                @extend .va-middle
+            }
+            width: 49%;
+            margin: 0 0 1.6rem
+        }
+    }
+
+    li {
+        margin-right: 1.2rem;
+        font-size: 1rem;
+        //padding: 0 5px;
+        @extend .align-self-center;
+        &:last-child {
+            @extend .me-0
+        }
+    }
+
+    a {
+        text-align: center;
+        @extend .d-block;
+        //@extend .text-gray-800;
+        color: var(--#{$prefix}-gray-800)
+    }
+
+    &.dark {
+        a {
+            @extend .text-heading
+        }
+    }
+
+    &.light {
+        a {
+            @extend .text-white
+        }
+    }
+
+    a[class*="btn-"] {
+        width: 39px;
+        height: 39px;
+        line-height: 39px
+    }
+
+    i {
+        @extend .position-relative;
+        z-index: 1
+    }
+
+    @include media-breakpoint-down(sm) {
+        a {
+            //font-size: .75rem
+        }
+        a[class*="btn-"] {
+            width: 28px;
+            height: 28px;
+            line-height: 28px
+        }
+    }
+}
+
+.social-white {
+    a {
+        @extend .text-white
+    }
+}
+

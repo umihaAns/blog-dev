@@ -1,0 +1,1017 @@
+// body
+// -------------------------------
+body {
+    //@include typography(14px, 1.42857143, 0, 300);
+    //text-align: left
+}
+
+b, strong {
+    font-weight: 700
+}
+
+// Text
+.fs-3xl {
+    font-size: $font-size-3xl !important
+}
+.fs-2xl {
+    font-size: $font-size-2xl !important
+}
+
+.fs-xl {
+    font-size: $font-size-xl !important
+}
+
+.fs-lg {
+    font-size: $font-size-lg !important
+}
+
+.fs-md {
+    font-size: $font-size-md !important
+}
+
+.fs-sm {
+    font-size: $font-size-sm !important
+}
+
+.fs-xs {
+    font-size: $font-size-xs !important
+}
+
+.fs-2xs{
+    font-size: $font-size-2xs !important
+}
+
+.text-shadow {
+    text-shadow: 0 1px 2px rgba($black, 0.35)
+}
+
+// @extend .text-ellipsis;
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    //display: inline-block
+}
+
+//global
+// -------------------------------
+//.label {
+//@include typography(.813rem, 1px, 0 0 10px, 500);
+//font-size: .813rem;
+//}
+label {
+    margin: 0 0 8px;
+    //line-height: 22px
+}
+
+.badge-list {
+    .badge {
+        //font-size: .813rem;
+        //text-transform: uppercase;
+        //line-height: 1.32857;
+        //vertical-align: top;
+        //font-weight: 500
+    }
+}
+
+.btn,
+label,
+.label,
+.form-control,
+.bootstrap-select .btn,
+.input-unit,
+.range-input,
+.dropdown-toggle,
+.card-address,
+.header-contact .header-info,
+.aq-tab-list .tab {
+    font-size: $font-size-xs
+}
+
+.btn {
+    //font-size: .75rem
+}
+
+.label,
+label,
+.btn,
+.range-input {
+    //font-weight: 400
+}
+
+.radio-inline label,
+.checkbox-inline label {
+    //font-weight: 400
+}
+
+
+.form-control,
+.bootstrap-select .btn,
+.input-unit,
+.filter-btn {
+    //font-size: .813rem;
+    //font-weight: 400
+}
+
+
+// buttons
+// -------------------------------
+/*.btn {
+  line-height: 1.42857;
+  //text-align: center
+}*/
+
+.btn-lg {
+    font-size: 1rem !important;
+    //line-height: 1.3333333 !important
+}
+
+//START PAGINATION STYLE*/
+.pagination-wrap {
+    .pagination {
+        a {
+            //@include typography(14px, 28px, 0, 500);
+            //font-size: .75rem;
+            line-height: 28px;
+            font-weight: 500
+        }
+    }
+}
+
+// Typography for template
+h1, h2, h3, h4, h5, h6 {
+    //margin-top: 0;
+    //margin: 0 0 28px
+}
+
+p {
+    margin: 0 0 1rem
+}
+
+
+//@include media-breakpoint-between(md, lg) {
+//    h1 {
+//        font-size: 2rem;;
+//    }
+//    h2 {
+//        font-size: 1.625rem;;
+//    }
+//    h3 {
+//        font-size: 1.375rem;
+//    }
+//}
+//
+//@include media-breakpoint-down(md) {
+//    h1 {
+//        font-size: 1.75rem;
+//    }
+//    h2 {
+//        font-size: 1.5rem;
+//    }
+//    h3 {
+//        font-size: 1.25rem;
+//    }
+//    h4 {
+//        font-size: 1.125rem;
+//    }
+//    h5 {
+//        font-size: .75rem;
+//    }
+//}
+
+//blockquote {
+//    font-size: .75rem;
+//    line-height: 26px;
+//}
+
+.article-content,
+.blog-body,
+.detail-content .property-description,
+.detail-card {
+    h1, h2, h3, h4, h5, h6 {
+        //margin: 0 0 1.125rem;
+        //margin-bottom: 1.125rem;
+        //margin-bottom: 20px
+    }
+
+    //h1 {
+    //    font-size: 1.875rem
+    //}
+    //
+    //h2 {
+    //    font-size: 1.5rem
+    //}
+    //
+    //h3 {
+    //    font-size: 1.25rem
+    //}
+    //
+    //h4 {
+    //    font-size: 1.125rem
+    //}
+    //
+    //h5 {
+    //    font-size: 1rem
+    //}
+    //
+    //h6 {
+    //    font-size: .75rem
+    //}
+
+    p {
+        //font-size: .75rem;
+        //margin-bottom: 24px;
+        //line-height: 26px;
+        //&:last-child {
+        //    margin: 0;
+        //}
+    }
+
+    ul,
+    ol {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-left: 25px;
+
+        li {
+            //padding-left: 6px;
+            //font-size: .75rem;
+            //line-height: 24px;
+            //font-weight: 400
+        }
+
+        ul,
+        ol {
+            margin-top: 8px;
+            margin-bottom: 8px
+        }
+    }
+
+    dt, dd {
+        //line-height: 24px
+    }
+
+    p, dd, ul li, ol li {
+        //font-size: .75rem;
+        //font-weight: 400
+    }
+
+    @include media-breakpoint-between(md, lg) {
+        //h1 {
+        //    font-size: 1.75rem
+        //}
+        //h2 {
+        //    font-size: 1.375rem
+        //}
+        //h3 {
+        //    font-size: 1.125rem
+        //}
+        //h4 {
+        //    font-size: .75rem
+        //}
+        //h5 {
+        //    font-size: .75rem
+        //}
+        //h6 {
+        //    font-size: .75rem
+        //}
+        ul,
+        ol {
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            li {
+                //font-size: .75rem;
+                //line-height: 26px
+            }
+        }
+        dt, dd {
+            //line-height: 18px
+        }
+        dd {
+            //font-size: .75rem
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        //h1 {
+        //    font-size: 1.375rem
+        //}
+        //h2 {
+        //    font-size: 1.25rem
+        //}
+        //h3 {
+        //    font-size: 1.125rem
+        //}
+        //h4 {
+        //    font-size: 1rem
+        //}
+        //h5 {
+        //    font-size: .75rem
+        //}
+        //h6 {
+        //    font-size: .75rem
+        //}
+        p, dd,
+        ul li,
+        ol li {
+            //font-size: .75rem
+        }
+        ul,
+        ol {
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            //li {
+            //    line-height: 20px;
+            //}
+        }
+        dt, dd {
+            //line-height: 18px
+        }
+    }
+}
+
+// headers
+// -------------------------------
+
+.navi > ul > li > a,
+.header-right .btn,
+.header-right a {
+    font-size: .813rem;
+    font-weight: 500
+}
+
+.account-dropdown ul > li a,
+.header-actions,
+.dropdown-menu > li > a,
+.breadcrumb li,
+.menu-dropdown,
+.mega-dropdown a {
+    font-size: .813rem;
+    font-weight: 400
+}
+
+.board-panel-menu > li,
+.board-panel-menu .sub-menu li {
+    font-size: 0.873rem;
+    font-weight: 300
+}
+
+//.menu-dropdown a {
+//    line-height: 20px;
+//}
+
+.extended-menu-btn {
+    font-weight: 500;
+    //line-height: 60px;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.header-contact {
+    .header-info {
+        .icon {
+            //font-size: 1.375rem;
+            //line-height: 20px
+        }
+
+        //.title {
+        //    font-size: .75rem;
+        //    font-weight: 500
+        //}
+
+        .value {
+            //font-size: .813rem
+        }
+    }
+}
+
+.crncy-lang-block .dropdown-menu li {
+    font-size: .75rem
+}
+
+
+//START HEADER EXTENDED MENU STYLE*/
+//.header-extended-menu{
+//  .card-price{
+//    font-size: 1.375rem;
+//    line-height: 22px;
+//    sub,
+//    sup{
+//      font-size: .75rem;
+//    }
+//  }
+//  .card-img-title .title{
+//    font-size: .75rem;
+//    line-height: 12px;
+//    margin: 5px 0 0;
+//  }
+//}
+
+//START BANNER TYPO STYLE*/
+.page-media-caption {
+    .caption-content {
+
+    }
+
+    //h2, h3, h4 {
+    //    text-transform: uppercase;
+    //}
+
+    //h2, h3 {
+    //    font-weight: 600
+    //}
+    //
+    //h2 {
+    //    font-size: 2.813rem
+    //}
+    //
+    //h3 {
+    //    font-size: 2.5rem
+    //}
+    //
+    //h4 {
+    //    font-size: 1.375rem;
+    //    //line-height: 32px;
+    //    //font-weight: 400;
+    //    //margin-bottom: 10px;
+    //    //letter-spacing: .09em
+    //}
+
+    //p {
+    //    font-size: 1rem;
+    //    //line-height: 28px;
+    //    font-weight: 300
+    //}
+
+    .breadcrumb li {
+        font-size: 1.125rem
+    }
+
+    @include media-breakpoint-down(lg) {
+        //h2 {
+        //    font-size: 2.125rem;;
+        //    //line-height: 40px
+        //}
+        //h3 {
+        //    font-size: 1.875rem;
+        //    //line-height: 36px
+        //}
+        //p {
+        //    margin-bottom: 15px;
+        //}
+        .breadcrumb li {
+            font-size: .75rem
+        }
+    }
+    //@include media-breakpoint-down(sm) {
+    //    h2 {
+    //        font-size: 1.75rem;
+    //        //line-height: 34px;
+    //        margin-bottom: 8px;
+    //    }
+    //    h3 {
+    //        font-size: 1.375rem;
+    //        //line-height: 28px;
+    //        margin-bottom: 10px;
+    //    }
+    //    h4 {
+    //        font-size: 1.125rem;
+    //        //line-height: 24px;
+    //    }
+    //    p {
+    //        margin-bottom: 10px;
+    //    }
+    //}
+}
+
+.slider-caption {
+    //.card-title-wrap {
+    //    .title {
+    //        font-size: 1.375rem;
+    //        //line-height: 30px;
+    //    }
+    //
+    //    .card-price {
+    //        font-size: 1.625rem;;
+    //        //line-height: 30px;
+    //    }
+    //}
+    //
+    //.card-description {
+    //    font-size: .938rem;;
+    //    //line-height: 25px;
+    //}
+}
+
+//START MODULES TYPO STYLE*/
+.module-head {
+    //.module-title {
+    //    font-size: 1.875rem;
+    //    line-height: 30px;
+    //    font-weight: 500;
+    //}
+
+    //.module-sub-title,
+    //.module-description {
+    //    font-size: 1.125rem;
+    //    line-height: 28px;
+    //}
+}
+
+.post-card-body,
+.post-card-body {
+    .card-title {
+        font-size: 1.125rem;
+        line-height: 22px
+    }
+}
+
+.testi-content-block {
+
+    .title {
+        font-size: 1.25rem
+    }
+
+    .designation {
+        font-size: .75rem
+    }
+
+    .testi-content {
+        //font-size: .938rem;;
+        //line-height: 25px;
+        //font-weight: 400
+    }
+}
+
+.news-card {
+    .card-title {
+        //line-height: 24px;
+        font-size: 1.125rem
+    }
+
+    .meta {
+        //font-weight: 400;
+        font-size: .813rem
+    }
+
+    .short-info {
+        //line-height: 25px;
+        //font-weight: 400
+    }
+}
+
+.membership-card {
+    .membership-price {
+        font-size: 4.375rem;;
+        line-height: 52px;
+        //font-weight: 500;
+        //text-align: center;
+
+        .price-before,
+        .price-after {
+            font-size: 2rem;;
+            line-height: 32px
+        }
+    }
+
+    .membership-title {
+        font-size: 1rem;
+        line-height: 22px;
+        font-weight: 500;
+        //text-align: center;
+        text-transform: uppercase
+    }
+
+    .membership-list {
+        li {
+            //text-align: center;
+            //font-size: .75rem;
+            line-height: 30px;
+            font-weight: 300
+        }
+    }
+
+    .membership-link {
+        //text-align: center
+    }
+}
+
+//START PROPERTY GRIS LIST ITEM TYPO*/
+.filter-actions span.title,
+.item-filter-inputs .filter-label {
+    font-size: .813rem;
+    font-weight: 400
+}
+
+.card-title-wrap,
+.item-caption-layer {
+
+    .card-title {
+        font-weight: 500
+    }
+
+    .address {
+        //@include typography(.813rem, 18px, 0, 400);
+        font-size: .813rem
+    }
+}
+
+.card-img-title {
+    .facility-type {
+        //@include typography(.813rem, .813rem, 0 0 8px, 500);
+        font-weight: 500;
+        font-size: .813rem
+    }
+
+    .card-price {
+        //@include typography(18px, 18px, 0, 600);
+        font-weight: 600;
+        font-size: 1.125rem
+    }
+}
+
+.card-facilities {
+    li {
+        //@include typography(.813rem, 22px, 0, 500);
+        font-size: .813rem;
+        line-height: 22px;
+        margin: 0;
+        font-weight: 500
+    }
+}
+
+//START PROFILE AND AGENT DETAIL PAGE STYLE
+.agent-detail .short-info li,
+.agent-detail .personal-info li,
+.agent-card .short-info li {
+    font-size: .813rem;
+    //font-weight: 400;
+    line-height: 27px
+}
+
+.agent-detail {
+    .block-title {
+        font-size: 1rem;
+        margin-bottom: 20px
+    }
+}
+
+.agent-short-info {
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 500
+    }
+
+    .card-subtitle {
+        font-size: .813rem
+    }
+
+    @include media-breakpoint-down(lg) {
+        .card-title {
+            font-size: 1.375rem
+        }
+        .card-subtitle {
+            //line-height: 18px;
+            //margin-bottom: 24px
+        }
+    }
+}
+
+.item-filter-title {
+    font-size: .75rem;
+    //font-weight: 500
+}
+
+//START PAGE TITLE AND BREADCRUMBS TYPO*/
+.page-title-wrap {
+    h1, h2, h3 {
+        margin: 0 !important;
+        font-size: 1.5rem;
+        //line-height: 24px
+    }
+}
+
+//START INNER PAGES STYLE
+.contact-info li .fa,
+.contact-info li i {
+    font-size: 27px;
+    text-align: center
+}
+
+.contact-info {
+    li {
+        //font-size: .75rem;
+        //font-weight: 400
+    }
+
+    strong {
+        font-size: .938rem;;
+        font-weight: 500
+    }
+}
+
+//START MODULES TYPO STYLE*/
+
+.agent-grid-body,
+.agent-grid-head {
+    .card-title {
+        font-size: 1.3rem
+    }
+
+    .card-subtitle {
+        font-size: .813rem;
+        margin: 0
+    }
+}
+
+.service-card {
+    .icon {
+        font-size: 3.7rem
+    }
+
+    //.card-title {
+    //    font-size: 1.25rem;
+    //}
+}
+
+.team-card {
+    //.card-title {
+    //    font-size: 1.25rem;
+    //}
+
+}
+
+.img-gallery-card {
+    .card-title {
+        //font-size: 1.625rem;;
+        //line-height: 26px
+    }
+
+    .card-subtitle {
+        //font-size: .938rem;;
+        //line-height: 15px;
+        //font-weight: 300
+    }
+
+    &.v2 {
+        .card-title {
+            //font-size: 1.5rem;
+            //line-height: 24px
+        }
+    }
+}
+
+//START PROPERTY DETAIL PAGES TYPO*/
+.detail-card .card-header .heading {
+
+}
+
+.property-detail .detail-title {
+    font-weight: 500
+}
+
+
+.card-header {
+    .head-right {
+        a {
+            font-size: .813rem
+        }
+    }
+}
+
+//START BLOG TYPO*/
+.blog-body {
+    .title {
+        font-size: 1.375rem;
+        //line-height: 34px
+    }
+}
+
+.blog-footer {
+    .btn-read {
+        //font-weight: 500;
+        font-size: .75rem
+    }
+
+    .author-meta,
+    .btn-read {
+        line-height: 30px
+    }
+}
+
+.author-meta {
+    li {
+        font-size: .813rem !important;
+        line-height: 20px !important
+    }
+}
+
+.meta-tags {
+    a {
+        @include typography(.813rem, 1, 0 3px 3px 0, 400)
+    }
+}
+
+.blog-section {
+    .section-title,
+    .reply-title {
+        font-size: 1.25rem;
+        //line-height: 20px;
+        margin: 0 0 40px;
+        @include media-breakpoint-down(md) {
+            font-size: 1rem;
+            //line-height: 16px;
+            margin: 0 0 28px
+        }
+    }
+}
+
+.blog-post-nav {
+    a {
+        font-size: .75rem;
+        font-weight: 500
+    }
+
+    span {
+        @include typography(14px, 14px, 0 0 5px, 400)
+    }
+}
+
+.blog-author {
+    .heading {
+        font-size: 1.125rem;
+        line-height: 18px;
+        margin: 0 0 5px
+    }
+}
+
+.comments-block {
+    .heading {
+        @include typography(16px, 20px, 0, 500);
+        @include media-breakpoint-down(sm) {
+            font-size: .75rem;
+            line-height: 18px
+        }
+    }
+
+    small {
+        font-size: .813rem
+    }
+}
+
+.comment-actions {
+    a {
+        @include typography(.813rem, .813rem, 0, 400)
+    }
+}
+
+//START WIDGETS TYPO STYLE*/
+//.widget-agent_contact {
+//    .name {
+//        font-weight: 500;
+//    }
+//
+//    li {
+//        line-height: 20px;
+//    }
+//}
+
+.widget-contact {
+    .phone {
+        font-weight: 400
+    }
+
+    .view {
+        font-size: .813rem;
+        line-height: .813rem
+    }
+}
+
+.widget-recent_posts {
+    .post-date {
+        font-weight: 400;
+        @extend .fs-xs
+    }
+}
+
+.widget-tags {
+    .tagcloud {
+        a {
+            @extend .fs-xs;
+            line-height: 22px;
+            font-weight: 500;
+            margin: 0 5px 5px 0
+        }
+    }
+}
+
+.widget-media_list {
+    .price,
+    .media-heading {
+        font-size: .75rem
+    }
+
+    .price {
+        line-height: 14px;
+        margin: 0 0 6px;
+        font-weight: 500
+    }
+
+    .media-heading {
+        line-height: 20px;
+        margin: 0 0 6px;
+        font-weight: 500
+    }
+
+    address,
+    .amenities p {
+        font-size: .813rem
+    }
+
+    address {
+        line-height: .813rem;
+        margin: 0 0 17px;
+        font-weight: 400;
+
+    }
+
+    .amenities p {
+        line-height: 15px;
+        margin: 0 0 6px;
+        font-weight: 400
+    }
+}
+
+.widget-calendar {
+    caption {
+        text-align: center;
+        //border-bottom: 1px solid $gray-dd;
+        font-weight: 600
+    }
+}
+
+
+//START DASHBOARD TYPO*/
+.media-drag-drop {
+    text-align: center;
+
+    .fa {
+        font-size: 42px
+    }
+
+    .drag-title {
+        font-weight: 400;
+        font-size: 1.75rem
+    }
+}
+
+.checkout-block {
+    .block-title {
+        font-size: .813rem;
+        line-height: .813rem;
+        font-weight: 500
+    }
+
+    .pkg-value {
+        font-size: .75rem;
+        font-weight: 400;
+
+        strong {
+            font-weight: 500
+        }
+    }
+
+    .valid-text {
+        font-weight: 300;
+        font-size: .813rem
+    }
+}
+
+.checkout-count {
+    .counter-bottom {
+        font-size: 1rem;
+        font-weight: 500
+    }
+}
+
+//.footer-widget{
+//  .widget-title{
+//    font-size: .75rem;
+//    line-height: 14px;
+//    margin: 0;
+//    font-weight: 500;
+//    text-transform: uppercase;
+//  }
+//}
+
+//START FOOTER TYPO*/
+.footer-copyright {
+    p {
+        margin: 0;
+        //@include typography(14px, 14px, 0, 400)
+    }
+}

@@ -1,0 +1,227 @@
+// UI RANGE SLIDER
+.ui-slider-horizontal {
+    height: 5px;
+
+    .ui-slider-handle {
+        top: -6.1px
+    }
+}
+
+.ui-widget.ui-widget-content {
+    border: 0;
+    background-color: $border-color
+}
+
+.ui-widget-header {
+    //@extend .bg-primary !optional
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+    border: 0
+}
+
+.ui-slider .ui-slider-handle {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    //@extend .bg-primary !optional;
+    cursor: pointer;
+    @include media-breakpoint-down(lg) {
+        width: 20px;
+        height: 20px;
+        top: -7px !important
+    }
+}
+
+// Carousel modules
+.aq-carousel {
+    .agent-grid-card {
+        margin: 0
+    }
+
+    .card-outer {
+        padding: 0;
+        width: 100%
+    }
+
+    .owl-nav div[class*="owl-"] {
+        top: 25%;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 1.125rem;
+        //line-height: 32px
+    }
+}
+
+// SLIDER NAV
+.owl-carousel {
+    .owl-nav div[class*="owl-"]{
+        @extend .bg-white
+    }
+    &:hover {
+        .owl-nav div[class*="owl-"] {
+            opacity: .9
+        }
+
+        .owl-prev {
+            left: 25px
+        }
+
+        .owl-next {
+            right: 25px
+        }
+    }
+}
+
+.slider-nav-xl {
+    .owl-nav div[class*="owl-"] {
+        width: 50px;
+        height: 50px;
+        line-height: 52px;
+        font-size: 2.813rem
+    }
+}
+
+.slider-nav-lg {
+    .owl-nav div[class*="owl-"] {
+        width: 40px;
+        height: 40px;
+        line-height: 42px;
+        font-size: 1.375rem
+    }
+}
+
+.slider-nav-md {
+    .owl-nav div[class*="owl-"] {
+        width: 30px;
+        height: 30px;
+        line-height: 32px;
+        font-size: 1.5rem
+    }
+}
+
+.slider-nav-sm {
+    .owl-nav div[class*="owl-"] {
+        width: 25px;
+        height: 25px;
+        line-height: 27px;
+        font-size: 1.25rem
+    }
+}
+
+.owl-nav {
+    div[class*="owl-"] {
+        @extend %animation-ease-in-out-3s;
+        @extend .shadow-element;
+        @extend .rounded-pill;
+        @extend .position-absolute;
+        top: 50%;
+        @include translate(0, -50%);
+        @extend .d-block;
+        width: 28px;
+        height: 28px;
+        line-height: 30px;
+        @extend .text-center;
+        font-size: .875rem;
+        @extend .text-default;
+        //border-radius: 1px;
+        opacity: 0.2;
+
+        &:hover,
+        &:active,
+        &:focus {
+            opacity: 1 !important
+        }
+    }
+
+    .owl-prev {
+        @extend .position-left;
+
+        i {
+            text-indent: -2px
+        }
+    }
+
+    .owl-next {
+        @extend .position-right;
+
+        i {
+            text-indent: 2px
+        }
+    }
+}
+
+.owl-prev,
+.owl-next {
+    @extend .d-flex;
+    @extend .justify-content-center;
+
+    i {
+        @extend .align-self-center
+    }
+}
+
+//.owl-nav .owl-next {
+//  right: 0;
+//  .fa {
+//    text-indent: 2px;
+//  }
+//}
+//
+//.owl-nav .owl-prev {
+//  left: 0;
+//  .fa {
+//    text-indent: -2px;
+//  }
+//}
+
+.owl-dots {
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    text-align: center;
+    line-height: 0;
+    &:not(.disabled) {
+        padding-top: 45px
+    }
+    //height: 6px;
+    @include media-breakpoint-down(lg) {
+        padding-top: 30px
+    }
+}
+
+.owl-dot {
+    font-size: 0;
+    padding: 0 4px;
+
+    span {
+        //@extend .shadow-element;
+        @extend %animation-3s;
+        width: 1.3rem;
+        height: 0.4rem;
+        background-color: lighten($gray-lighter, 8%);
+        @extend .br-3;
+
+        &:hover {
+            @extend .bg-primary !optional
+        }
+    }
+
+    &.active {
+        span {
+            width: 1.8rem;
+            height: 0.5rem;
+            @extend .bg-primary !optional;
+            @extend .justify-content-end;
+            //opacity: 1
+        }
+    }
+
+}
+
+.owl-dot,
+.owl-dot span {
+    @extend .d-inline-block
+}

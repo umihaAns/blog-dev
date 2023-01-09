@@ -1,0 +1,36 @@
+// UI RANGE SLIDER
+.ui-slider-horizontal {
+  height: 5px;
+
+  .ui-slider-handle {
+    top: -6.1px;
+    //@extend .bx-shadow-2;
+  }
+}
+
+.ui-widget.ui-widget-content {
+  border: 0;
+  background-color: $border-color
+}
+
+.ui-widget-header {
+  //@extend .bg-primary !optional
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  border: 0
+}
+
+.ui-slider .ui-slider-handle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  //@extend .bg-primary !optional;
+  cursor: pointer;
+  @include media-breakpoint-down(lg) {
+    width: 20px;
+    height: 20px;
+    top: -7px !important;
+  }
+}

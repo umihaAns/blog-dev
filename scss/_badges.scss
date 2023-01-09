@@ -1,0 +1,102 @@
+// Badges --------------------------------
+.badge {
+    //padding: 0.55em 0.95em
+}
+
+.rating-badge {
+    //padding: 0.45em 0.6em
+}
+
+.badge-xl {
+    font-size: $badge-font-size * 1.4
+}
+.badge-lg {
+    font-size: $badge-font-size * 1.2
+}
+
+.badge-md {
+    font-size: $badge-font-size * 1
+}
+
+.badge-sm {
+    font-size: $badge-font-size * .86
+}
+
+//.badge-sm {
+//    font-size: $badge-font-size * 1;
+//    //padding: 0.35em 0.55em;
+//}
+
+.view-badge {
+    &:hover {
+        @extend .text-white
+    }
+}
+
+// badge list
+.badge-list {
+    //@extend .d-inline-block;
+    //font-size: 0;
+    //line-height: normal;
+    //vertical-align: middle;
+    z-index: 1;
+
+    .badge,
+    label,
+    .label {
+        //display: inline-block;
+        margin-right: 5px;
+        //@extend .text-white;
+        //border-radius: 2px;
+        //padding: 4px 8px 3px;
+        //margin-bottom: 0;
+        //height: 18px;
+        &:last-child {
+            margin: 0
+        }
+    }
+
+    &.top-left,
+    &.top-right {
+        @extend .position-absolute;
+        top: 20px;
+        //z-index: 3
+    }
+
+    &.top-left {
+        left: 20px;
+        right: auto
+    }
+
+    &.top-right {
+        right: 20px;
+        left: auto
+    }
+}
+
+.badge-dot {
+    i, .fa {
+        font-size: 80%;
+        @extend .va-middle;
+        @extend .position-relative;
+        top: -1px
+    }
+}
+
+.control-badge {
+    @extend %animation-3s;
+    @extend .position-absolute;
+    top: calc(50% - 10px);
+    right: 0;
+    width: 32px;
+    height: 20px;
+    line-height: 1.6em;
+    //border: 1px solid $border-color;
+    @extend .fs-xs;
+    @extend .d-block;
+    @extend .text-center;
+    @extend .br-3;
+    @extend .text-gray-600;
+    //@extend .bg-gray-500;
+    @extend .fw-500
+}

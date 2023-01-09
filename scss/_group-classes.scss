@@ -1,0 +1,221 @@
+//group classes
+// Text color
+h1, h2, h3, h4, h5, h6 {
+  @extend .text-heading
+}
+
+p,
+ul li,
+ol li,
+blockquote,
+dd {
+  //@extend .text-default
+}
+
+// primary color group classes
+//a,
+.btn-transparent,
+.breadcrumb li.active,
+.navi .mega-dropdown a:hover,
+.hz-search-filter .filter-btn.active,
+.hz-search-filter .filter-btn.active .fa,
+.hz-search-filter .filter-btn:hover,
+.hz-search-filter .filter-btn:focus,
+.hz-search-filter .filter-btn:active,
+.hz-search-filter .filter-btn:hover .fa,
+  //.card-actions .btn .fa,
+.card-footer .card-user-img a:hover,
+.filter-view-btn:hover,
+.filter-view-btn.active,
+.property-actions li:hover,
+.property-actions li:active,
+.property-actions li:focus,
+.property-actions li.active,
+.listing-card-layer .card-img-actions li:hover,
+.listing-card-layer .card-img-actions li.active,
+#property-media #detail-titlebar .property-actions li:hover,
+#property-media #detail-titlebar .property-actions li:active,
+#property-media #detail-titlebar .property-actions li:focus,
+.agent-grid-body .info .name:hover,
+.agent-grid-head .info .name:hover,
+.dashboard-titlebar .visit-site:hover,
+.detail-lightbox .lightbox-actions .view-image:hover,
+.filter-trigger:before,
+.blog-body .title a:hover,
+.comment-actions .comment-like:hover,
+.comment-actions .comment-edit-link:hover,
+.author-meta li a:hover,
+.modal-header .close:hover,
+.agent-short-info .name a:hover,
+.header-contact .header-info .icon,
+.search-mobile .search-btn:hover button,
+.search-mobile .advance-btn:hover button,
+.search-mobile .advance-btn.active button,
+.modal .btn-close:hover,
+.modal .close:hover,
+.widget-agent_contact .name a:hover,
+.agent-grid-body .view:hover,
+.team-card:hover .title a,
+.team-card .aq-social-icons a:hover,
+.contact-info li a:hover {
+  color: $primary
+}
+
+// primary hover
+a:hover,
+a:focus,
+a:active
+{
+    color: $primary-hover
+}
+.navi > ul > li > a:hover,
+.header-actions:hover,
+.login-register a:hover,
+.menu-dropdown a:hover,
+.menu-dropdown li.active > a,
+.top-nav > ul .menu-dropdown a:hover,
+.card-title-wrap .title a:hover,
+.service-card .title a:hover,
+.service-card .ser-link:hover,
+.service-card:hover .icon,
+.service-card:hover .title a,
+.news-card .heading a:hover {
+    color: $primary-hover
+}
+
+// primary background
+
+.label-primary,
+.header-actions:before,
+.ui-widget-header,
+.ui-slider .ui-slider-handle,
+.property-video-block,
+.loading-bar,
+.account-dropdown ul > li .msg-alert,
+.map-info-box .box-close:hover,
+.cluster div,
+.map-btn:hover,
+.meta-tags a,
+.module-head .title-alt::before,
+.module-head .title-alt::after,
+.table-primary > thead > tr > th,
+.aq-lightbox-thumb:hover .imgs-counter,
+.header-contact .aq-social-icons a:hover,
+.pagination-wrap .pagination li.active a,
+.pagination-wrap .pagination li:hover a,
+.pagination-wrap .pagination li:focus a {
+  background-color: $primary
+}
+
+// primary border color
+.filter-view-btn:hover,
+.filter-view-btn.active,
+.hz-search-inner .hz-search-dropdown .bootstrap-select .btn:focus,
+.hz-search-inner .hz-search-input .form-control:focus,
+.header-transparent .hz-search-inner .hz-search-dropdown .bootstrap-select .btn:focus,
+.header-transparent .hz-search-inner .hz-search-input .form-control:focus,
+.cluster div:after,
+blockquote,
+.service-card:hover,
+.service-card:hover .icon,
+.header-contact .aq-social-icons a:hover,
+.team-card:hover,
+.open > .btn.dropdown-toggle,
+.open > .btn.dropdown-toggle,
+.open > .bootstrap-select .btn,
+.open > .btn-default.dropdown-toggle,
+.open > .btn-default.dropdown-toggle:hover,
+.open > .btn-default.dropdown-toggle:focus,
+.open > .btn-default.dropdown-toggle:active {
+  border-color: $primary
+}
+
+// secondary color group classes
+
+.property-actions .action-fave.active i,
+.property-actions .action-fave.active .fa {
+  color: $secondary
+}
+
+//secondary background color
+.label-secondary {
+    background-color: $secondary
+}
+
+.hover-effect:before,
+.hover-effect2:before,
+.hover-effect3:before {
+  @extend .hover-effect-bg-primary
+}
+
+//headers,dropdowns style
+.account-dropdown,
+.menu-dropdown,
+.menu-dropdown ul {
+    background-color: $white
+}
+
+.menu-dropdown > li,
+.menu-dropdown > li ul > li,
+.account-dropdown ul > li,
+.dropdown-menu > li {
+  border-color: lighten($border-color, 10%)
+}
+
+.mobile-nav-dropdown ul ul,
+.mobile-nav-dropdown li:hover,
+.mobile-nav-dropdown li.active,
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:active {
+    background-color: $primary-100;
+    color: $primary
+}
+
+.account-dropdown ul,
+.mega-dropdown {
+    li.active,
+    li:hover {
+        > a {
+            background-color: $primary-100;
+            color: $primary
+        }
+    }
+}
+
+// mobile dropdowns
+.mobile-nav-dropdown li,
+.mobile-nav-dropdown .menu-expand {
+  border-color: lighten($border-color, 10%)
+}
+
+.mobile-nav-dropdown li.active,
+.mobile-nav-dropdown li:hover,
+.mobile-nav-dropdown ul ul li,
+.mobile-nav-dropdown ul ul li.active {
+  border-color: rgba($black, .05)
+}
+
+// Content elements style
+.filter-nav li:active a,
+.filter-nav li.active a,
+.filter-nav li:hover a,
+.tab.active,
+.tab:active,
+.tab:hover {
+  //box-shadow: inset 0 -3px 0 $primary
+}
+
+.agent-card-footer .view-list-btn:hover,
+.agent-card-footer .view-list-btn:active,
+.agent-card-footer .view-list-btn:focus {
+  @extend .border-secondary;
+  @extend .bg-secondary !optional
+}
+
+.card-actions .btn:hover,
+.card-actions .btn:active,
+.card-actions .btn:focus {
+  @extend .bg-primary !optional;
+  @extend .border-primary
+}

@@ -1,0 +1,88 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/helpers/color-bg";
+
+$utilities: map-merge(
+        $utilities,
+        (
+            //"width": map-merge(
+            //    map-get($utilities, "width"),
+            //    (
+            //        values: map-merge(
+            //                map-get(map-get($utilities, "width"), "values"),
+            //                (10: 10%),
+            //        ),
+            //    ),
+            //),
+            //"color": map-merge(map-get($utilities, 'color'), $colors),
+            "color": (
+                property: color,
+                class: text,
+                local-vars: (
+                    "text-opacity": 1
+                ),
+                //responsive: true,
+                values: map-merge($utilities-text-colors, $colors)
+            ),
+            "text-gray": (
+                property: color,
+                class: text-gray,
+                //responsive: true,
+                values: $grays,
+            ),
+            "text-primary": (
+                property: color,
+                class: primary,
+                //responsive: true,
+                values: $primary-colors,
+            ),
+            "border-color": (
+                property: border-color,
+                class: border,
+                values: $border-colors,
+            ),
+            "border-gray": (
+                property: border-color,
+                class: border-gray,
+                values: $grays,
+            ),
+            "border-top": (
+                property: border-top-color,
+                class: border-top,
+                values: $border-colors,
+            ),
+            "background-color": (
+                property: background-color,
+                class: bg,
+                values: map-merge-multiple($utilities-bg-colors, $colors, $theme-colors)
+            ),
+            "background-primary": (
+                property: background-color,
+                class: bg-primary,
+                values: $primary-colors,
+            ),
+            "background-gray": (
+                property: background-color,
+                class: bg-gray,
+                values: $grays,
+            ),
+            "background-blur": (
+                property: background-color,
+                class: bg-blur,
+                local-vars: (
+                    "backdrop-filter": blur(5px)
+                ),
+                values: $blur-colors,
+            )
+        )
+);
+
+// @extend .hover-effect-text-primary;
+.hover-effect-bg-primary {
+    background-color: rgba($primary, .8) !important
+}
+
+@import "../node_modules/bootstrap/scss/utilities/api";

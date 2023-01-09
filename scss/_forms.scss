@@ -1,0 +1,496 @@
+// Input fields style ------------------------
+.icon-holder {
+    @extend .position-relative;
+
+    .form-control:not(textarea) {
+        padding-left: 46px
+    }
+
+    &.icon-right {
+        .form-control:not(textarea) {
+            padding-left: 12px;
+            padding-right: 46px
+        }
+
+        .field-icon {
+            left: auto;
+            right: 0
+        }
+    }
+
+    &.icon-dark {
+        .field-icon {
+            @extend .bg-gray;
+            @extend .text-white
+        }
+    }
+
+    .field-icon {
+        @extend .position-absolute;
+        left: 0;
+        top: 0;
+        height: 46px;
+        width: 46px;
+        line-height: 46px;
+        text-align: center;
+        //border-right: 1px solid $border-color;
+        //color: $text-light;
+        @extend .text-subtext;
+        font-size: 1.125rem
+    }
+
+    .input-unit {
+        @extend .position-absolute;
+        right: 14px;
+        top: 50%;
+        @include translate(0, -50%);
+        z-index: 3
+    }
+}
+
+.input-unit {
+    @extend .bg-white;
+    display: inline-block;
+    @extend .text-subtext
+}
+
+label {
+    @extend .fw-500;
+    &.error {
+        @extend .text-danger;
+        //font-size: 13px;
+        //margin: .5rem 0 0
+    }
+}
+
+
+.form-control {
+    @include placeholder;
+    @extend .text-default;
+    padding: 6px 20px;
+    //height: $input-height;
+    &:focus {
+        box-shadow: none;
+        border-color: $primary
+    }
+
+    &.error {
+        @extend .border-danger;
+        //border-color: $danger
+    }
+
+    //@include media-breakpoint-down(md) {
+    //  height: 47px;
+    //}
+}
+
+.form-check {
+    label {
+        @extend .m-0
+    }
+}
+
+.form-check-input {
+    //margin-top: 0.2em
+}
+
+.form-control,
+.bootstrap-select .btn,
+.chosen-container, .chosen-container .chosen-single {
+    border-color: $input-border-color;
+    box-shadow: none;
+    //padding-top: 6px;
+    //padding-bottom: 6px;
+
+}
+
+.form-control:not(textarea),
+.bootstrap-select .btn,
+.chosen-container, .chosen-container .chosen-single {
+    height: $input-height
+}
+
+.form-group {
+    margin-bottom: 20px
+}
+
+.input-group-addon {
+    padding: 6px 18px;
+    @extend .bg-white;
+    color: $gray-lighter
+}
+
+.input-group-text {
+    min-width: 42px;
+    @extend .justify-content-center
+}
+
+@include media-breakpoint-down(sm) {
+    //  label,
+    //  .btn,
+    //  .form-control,
+    //  .bootstrap-select .btn {
+    //    font-size: .75rem;
+    //  }
+
+    .btn.btn-scrollup {
+        font-size: 25px
+    }
+}
+
+// AQ Radio & Checkbox --------------------
+.aq-radio-check {
+    @extend .position-relative;
+
+    &.check {
+        span {
+            &:first-child {
+                @extend .br-2;
+
+                &:before {
+                    @extend .br-2;
+                }
+            }
+        }
+
+        svg {
+            top: calc(50% - 0.3rem);
+            left: calc(50% - 0.4rem);
+            fill: none;
+            stroke: white;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 16px;
+            stroke-dashoffset: 16px;
+            transition: all .3s ease;
+            transition-delay: .1s;
+            //transform: translate3d(0, 0, 0);
+            @include translate3d(0, 0, 0)
+        }
+    }
+
+    &.radio {
+        span {
+            &:first-child {
+                border-radius: 50%;
+
+                &:before {
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        svg {
+            top: 0.2rem;
+            left: 0.2rem
+        }
+    }
+}
+
+.radio-check-label {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    @extend .cursor-pointer;
+    @extend .m-0;
+    @extend .d-flex;
+    font-weight: 400;
+    font-size: 0.8425rem;
+
+    span {
+        // @extend .d-inline-block;
+        //@extend .va-middle;
+        @extend .align-self-center;
+        @include translate3d(0, 0, 0);
+
+        &:first-child {
+            @extend .position-relative;
+            width: 20px;
+            height: 20px;
+            transform: scale(1);
+            //@extend .va-middle;
+            border: 1px solid $gray-light;
+            transition: all .2s ease;
+
+            svg {
+                @extend .position-absolute;
+                z-index: 1
+            }
+
+            &:before {
+                content: "";
+                @extend .w-100;
+                @extend .h-100;
+                @extend .bg-primary !optional;
+                @extend .d-block;
+                transform: scale(0);
+                @extend .opacity-100;
+                border-radius: 50%;
+                transition-delay: .2s
+            }
+        }
+
+        &:nth-child(2) {
+            margin-left: 8px;
+            @extend .flex-grow-1;
+
+            //&:after {
+            //    content: "";
+            //    @extend .position-absolute;
+            //    @extend .w-100;
+            //    top: 0.8rem;
+            //    left: 0;
+            //    height: 1px;
+            //    background: $gray-light;
+            //    transform-origin: 0 0;
+            //    transform: scaleX(0);
+            //}
+        }
+    }
+
+    &:hover span:first-child {
+        @extend .border-primary
+    }
+}
+
+.radio-check-input:checked + .radio-check-label {
+    span {
+        &:first-child {
+            @extend .border-primary;
+            @extend .bg-primary !optional;
+            //animation: check .6s ease;
+
+            svg {
+                stroke-dashoffset: 0
+            }
+
+            &:before {
+                transform: scale(2.2);
+                @extend .opacity-0;
+                transition: all .6s ease
+            }
+        }
+
+        //&:nth-child(2) {
+        //    color: $gray-light;
+        //    transition: all .3s ease;
+        //
+        //    &:after {
+        //        transform: scaleX(1);
+        //        transition: all .3s ease;
+        //    }
+        //}
+    }
+
+    .control-badge {
+        @extend .bg-gray-200;
+        //@extend .text-white
+    }
+}
+
+// chosen select style --------------------
+.chosen-container-single {
+    .chosen-single {
+        @include border-radius($border-radius);
+        font-size: .813rem;
+        @extend .fw-400;
+        color: $input-color-placeholder !important;
+        @extend .bg-white;
+        //color: lighten($input-color-placeholder, 10%);
+        @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+        span {
+            margin-right: 1rem
+        }
+
+        div {
+            &:before {
+                @extend .position-relative;
+                //font-size: 1rem;
+                //top: 0.1rem
+            }
+        }
+
+        &:hover {
+            //@extend .bg-white;
+            //color: $input-color-placeholder;
+            //border-color: $input-border-color
+        }
+
+        //&:focus,
+        //&:active,
+        //&:active:focus {
+        //    @extend .bg-white;
+        //    @extend .border-primary;
+        //    @extend .text-heading;
+        //}
+    }
+
+    &.chosen-with-drop {
+        .chosen-single {
+            @extend .text-body
+        }
+    }
+}
+
+// chosen plugin style
+.selectpicker {
+    opacity: 0
+}
+
+.chosen-container {
+    width: 100% !important
+}
+
+.chosen-container,
+.chosen-container .chosen-single {
+    //height: 46px;
+    line-height: 100%
+}
+
+.chosen-container-active .chosen-single {
+    @extend .shadow-none
+}
+
+.chosen-container .chosen-single,
+.chosen-container-active.chosen-with-drop .chosen-single {
+
+}
+
+.chosen-container .chosen-results li {
+
+}
+
+.chosen-container .chosen-results li.highlighted {
+
+}
+
+.chosen-container .chosen-results li.highlighted,
+.chosen-container .chosen-results li.result-selected {
+
+}
+
+.chosen-container-single .chosen-single div::before,
+.dropdown-toggle::after {
+    font-size: .9375rem !important
+}
+
+.chosen-sm {
+    & + .chosen-container .chosen-single {
+        font-size: .75rem
+    }
+
+    & + .chosen-container,
+    & + .chosen-container .chosen-single {
+        height: 38px
+    }
+}
+
+.create-rating-wrap {
+    @extend .d-inline-block;
+    font-size: 1rem;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both
+    }
+}
+
+.star-rating__ico {
+    float: right;
+    padding-left: .3rem;
+    cursor: pointer;
+    font-size: 25px;
+    @extend .text-warning;
+    @extend .m-0;
+
+    &:last-child {
+        padding-left: 0
+    }
+}
+
+.star-rating__input {
+    @extend .d-none
+}
+
+.star-rating__ico:hover:before,
+.star-rating__ico:hover ~ .star-rating__ico:before,
+.star-rating__input:checked ~ .star-rating__ico:before {
+    content: "\f005"
+}
+
+// date range picker style
+.aq-check-in,
+.aq-check-out {
+    @extend %animation-3s;
+    @extend .bg-white;
+    @extend .border;
+
+    &:focus,
+    &:active {
+        @extend .border-primary
+    }
+}
+
+.aq-check-in .aq-date-info-title,
+.aq-check-out .aq-date-info-title {
+    top: 5px;
+    left: 39px;
+    @extend .m-0;
+    @include opacity(1);
+
+}
+
+.aq-check-in .fa, .aq-check-out .fa {
+    font-size: .75rem
+}
+
+.aq-dates {
+    padding: 0.375rem 1rem;
+    height: 46px;
+    box-sizing: border-box;
+    line-height: 35px;
+    @extend .text-default;
+    @extend .text-default;
+
+    i {
+        margin-right: 5px
+    }
+}
+.aq-check-in {
+    .aq-datepicker-days {
+        @include media-breakpoint-down(lg) {
+            left: 0 !important;
+        }
+    }
+}
+.aq-check-out {
+    .aq-datepicker-days {
+        @include media-breakpoint-down(lg) {
+            //left: auto !important;
+            right: 0 !important;
+        }
+    }
+}
+.aq-datepicker-days {
+    right: 0;
+    left: auto !important
+}
+
+.aq-start.aq-today,
+.aq-end.aq-today,
+.aq-today {
+    &:after {
+        border-top-color: $dark
+    }
+}
+
+.aq-hover-day::after {
+    border-top-color: $dark
+}
+
+.aq-today:hover::after {
+    border-top-color: $primary
+}

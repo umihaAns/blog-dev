@@ -1,0 +1,161 @@
+@import "../scss/mixins/buttons";
+button {
+    @extend %animation-ease-out-3s
+}
+
+// btn colors
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+    @extend .text-white;
+
+    &:hover,
+    &:focus {
+        @extend .text-white
+    }
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-info,
+.btn-outline-warning,
+.btn-outline-danger,
+.btn-outline-dark,
+{
+    &:hover,
+    &:focus {
+        @extend .text-white
+    }
+}
+
+.btn {
+    @extend %animation-ease-out-3s;
+
+    i, .fa {
+        @extend %animation-ease-out-3s;
+        @extend .position-relative;
+        //top: 1px;
+        //font-size: .938rem;
+    }
+}
+
+.btn.btn-scrollup {
+    display: none;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    width: 40px;
+    height: 36px;
+    -webkit-transition: none !important;
+    transition: none !important;
+    font-size: 1.75rem;
+    line-height: 32px;
+    text-align: center;
+    padding: 0 !important;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.2);
+    z-index: 999
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+@each $color, $value in $blur-colors {
+    .btn-blur-#{$color} {
+        @if $color == "light" {
+            @include button-blur-variant(
+                    $value,
+                    blur(5px),
+                    $value,
+                $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+                $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+                $active-background: shade-color($value, $btn-active-bg-shade-amount),
+                $active-border: shade-color($value, $btn-active-border-shade-amount)
+            );
+        } @else if $color == "dark" {
+            @include button-blur-variant(
+                    $value,
+                    blur(5px),
+                    $value,
+                $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+                $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+                $active-background: tint-color($value, $btn-active-bg-tint-amount),
+                $active-border: tint-color($value, $btn-active-border-tint-amount)
+            );
+        } @else {
+            @include button-blur-variant($value, blur(5px), $value);
+        }
+    }
+}
+
+
+.btn-long {
+    padding-left: 55px;
+    padding-right: 55px
+}
+
+.btn-slim {
+    //@include button-size(9px);
+    padding-top: 9px;
+    padding-bottom: 9px
+}
+
+//.btn-sm {
+//
+//}
+.btn-xs {
+    @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $border-radius)
+}
+
+.btn-white {
+    //@extend .bg-white;
+    //@extend .text-default;
+    //border-color: $border-color;
+    //
+    //&:hover,
+    //&:focus,
+    //&:active {
+    //    @extend .bg-primary !optional;
+    //    color: $white !important;
+    //    border-color: $primary
+    //}
+    //--bs-btn-font-weight: 600;
+    --#{$prefix}btn-bg: var(--#{$prefix}white);
+    --#{$prefix}btn-border-color: var(--#{$prefix}white);
+    //--#{$prefix}btn-border-radius: .5rem;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: #{shade-color($primary, 10%)};
+    --#{$prefix}btn-hover-border-color: #{shade-color($primary, 10%)};
+    --#{$prefix}btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --#{$prefix}btn-active-color: var(--#{$prefix}btn-hover-color);
+    --#{$prefix}btn-active-bg: #{shade-color($primary, 20%)};
+    --#{$prefix}btn-active-border-color: #{shade-color($primary, 20%)};
+
+}
+
+.btn-outline-white {
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-border-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}white);
+    --#{$prefix}btn-focus-shadow-rgb: 33, 37, 41;
+    --#{$prefix}btn-active-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-bg: var(--#{$prefix}white);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-shadow: 0;
+    --#{$prefix}btn-disabled-color: var(--#{$prefix}white);
+    --#{$prefix}btn-disabled-bg: transparent;
+    --#{$prefix}btn-disabled-border-color: var(--#{$prefix}white);
+    --#{$prefix}gradient: none
+}
+
+.btn-current-location {
+    @extend .text-heading;
+
+}
